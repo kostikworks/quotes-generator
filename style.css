@@ -30,8 +30,7 @@ body {
     line-height: 1;
     box-sizing: border-box;
     height: 100vh; /* Use full height of the viewport */
-    display: flex; /* Flexbox to center content */
-    justify-content: center; /* Center horizontally */
+    display: flex; /* Flexbox to center content */ /* Center horizontally */
     align-items: center; /* Center vertically */
     background-color: #F5F5F5; /* Background color */
     flex-direction: column; /* Column layout */
@@ -69,6 +68,7 @@ table {
 }
 
 .heading {
+    margin-top: 300px;
     font-family: "Roboto", sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
@@ -120,25 +120,37 @@ table {
 
 .quote-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    height: 150px; /* Fixed height for the quote container */
-    overflow: hidden; /* Prevent overflow */
-    width: 1000px;
-}
-
-.quote {
-    font-family: "Roboto", sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    line-height: 1.2; /* Adjust line height for better spacing */
-    max-height: 100%; /* Ensure quote doesn't exceed the container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: row; /* Ensures quote and icon stay in the same row */
+    position: relative; /* Needed for absolute positioning of .icon */
+    max-width: 1000px;
+    min-height: 100px;
     background-color: rgb(216, 216, 216);
     border: 1px solid rgb(171, 171, 171);
-    padding: 10px 10px;
     border-radius: 15px;
-    display: none; /* Hide the quote initially */ 
-    
+    padding: 20px;
+    display: none;
+}
+
+
+.quote {
+    flex: 1; /* Takes up remaining space */
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+    padding: 10px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #1A1A1A;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.icon:hover {
+    color: #979797;
 }
