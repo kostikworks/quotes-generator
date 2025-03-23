@@ -97,7 +97,7 @@ table {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 100%;
+    width: 70%;
     will-change: transform;
     margin-bottom: 20px; /* Adjust margin-bottom for spacing */
 }
